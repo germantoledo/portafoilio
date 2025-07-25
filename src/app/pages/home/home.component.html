@@ -1,0 +1,92 @@
+<div class="min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-br from-gray-900 via-blue-950 to-blue-900 relative overflow-hidden">
+  <!-- Animated background shapes -->
+  <div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-blue-700 opacity-30 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-0 right-0 w-80 h-80 bg-purple-600 opacity-20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+    <div class="absolute top-1/2 left-1/2 w-72 h-72 bg-cyan-400 opacity-10 rounded-full blur-2xl animate-pulse delay-500"></div>
+    <!-- Extra shapes for depth -->
+    <div class="absolute top-20 right-1/4 w-40 h-40 bg-pink-400 opacity-10 rounded-full blur-2xl animate-pulse delay-700"></div>
+    <div class="absolute bottom-10 left-1/3 w-32 h-32 bg-yellow-300 opacity-10 rounded-full blur-2xl animate-pulse delay-300"></div>
+  </div>
+
+  <div class="w-full max-w-7xl px-4 py-12 md:py-20 bg-blue-950/80 shadow-2xl rounded-3xl flex flex-col flex-1 z-10 border border-blue-800 backdrop-blur-md ring-2 ring-blue-400/20">
+    <app-profile-section></app-profile-section>
+
+    <header class="my-20 text-center">
+      <h1 class="text-6xl md:text-7xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-400 drop-shadow-2xl animate-gradient-x tracking-tight">
+        Mi Portafolio
+      </h1>
+      <p class="text-2xl md:text-3xl text-blue-200 font-light max-w-2xl mx-auto">
+        Bienvenido a mi portafolio. Aquí puedes ver algunos de mis proyectos realizados.
+      </p>
+    </header>
+
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-blue-300 mb-6 text-center">Proyectos Web</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:px-8">
+        <app-proyect-card
+          title="Health Manager"
+          description="Sistema web de citas médicas desarrollado en Angular, NestJS, MySQL. Permite a los usuarios gestionar sus citas médicas de manera eficiente."
+          imageUrl="assets/HM.png"
+          link="https://healthmanager.com.mx">
+        </app-proyect-card>
+        <app-proyect-card
+          title="Mi HealthCenter"
+          description="Sistema web de reserva de consultorios para negocio coworking médico, desarrollado en Angular, MySQL, NestJS. Facilita la gestión de reservas y pagos para profesionales de la salud."
+          imageUrl="assets/HC.png"
+          link="https://mihealthcenter.com">
+        </app-proyect-card>
+        <app-proyect-card
+          title="Vacachic"
+          description="Sistema de venta de ropa de segunda mano multivendedor, desarrollado en Angular, MySQL, NestJS. Permite a los usuarios comprar y vender ropa de manera sostenible."
+          imageUrl="assets/Vacachic.png"
+          link="https://vacachic.store">
+        </app-proyect-card>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-bold text-blue-300 mb-6 text-center">Proyectos Apps</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:px-8">
+        <app-proyect-card
+          title="Health Manager App"
+          description="Aplicación móvil para gestión de citas médicas, desarrollada en Ionic, Angular, NestJS. Permite a los usuarios gestionar sus citas médicas desde su dispositivo móvil."
+          imageUrl="assets/HMAPP.webp"
+          link="https://play.google.com/store/apps/details?id=mx.com.healthmanager2">
+        </app-proyect-card>
+        <app-proyect-card
+          title="Clinica foianini"
+          description="Aplicación móvil para gestión de citas médicas, desarrollada en Oracle APEX. Permite a los usuarios gestionar sus citas médicas desde su dispositivo móvil."
+          imageUrl="assets/FOIA.webp"
+          link="https://play.google.com/store/apps/details?id=com.clinicafoianini&hl=es_BO">
+        </app-proyect-card>
+      </div>
+    </section>
+
+
+    <section class="my-16 flex flex-col items-center">
+      <h2 class="text-3xl font-bold text-blue-300 mb-4 text-center">¿Te gustaría trabajar conmigo?</h2>
+      <p class="text-lg text-blue-200 mb-6 text-center max-w-xl">
+        Si tienes una idea, proyecto o simplemente quieres ponerte en contacto, no dudes en escribirme. ¡Estoy disponible para nuevas oportunidades y colaboraciones!
+      </p>
+      <a href="https://wa.me/59175359174" target="_blank" rel="noopener" class="inline-block px-8 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 hover:from-green-400 hover:to-blue-400 transition-transform duration-200">
+        Contáctame por WhatsApp
+      </a>
+    </section>
+
+    <footer class="mt-16 text-center text-blue-400 text-base tracking-wide border-t border-blue-800 pt-6">
+      © 2025 German Toledo. Todos los derechos reservados.
+    </footer>
+  </div>
+</div>
+
+<style>
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 6s ease-in-out infinite;
+}
+</style>
